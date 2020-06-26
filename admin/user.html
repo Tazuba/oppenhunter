@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hello World">
+  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+
+  <title>Open hunter</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!--link to mainsfiest file-->
+  <link rel="manifest" href="/manifest.json">
+
+  <!--summernote-->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.js"></script>
+
+
+  <style>
+    /*for nave bar*/
+
+    #mobile {
+      display: none;
+    }
+
+
+
+    /* On screens that are 992px or less, set the background color to blue */
+    @media screen and (max-width: 992px) {
+      #desktop {
+        display: ;
+      }
+
+      #mobile {
+        display: none;
+      }
+
+    }
+
+    /* On screens that are 600px or less, set the background color to olive */
+    @media screen and (max-width: 600px) {
+      #dektop {
+        display: none;
+      }
+
+      #mobile {
+        display: inline-block;
+      }
+
+      /*for trending*/
+      #trendingdesk {
+        display: none;
+      }
+
+    }
+
+    /*menu btns */
+    #menubtn {
+      border-radius: 50%;
+      border: none;
+      margin-bottom: 3%;
+      padding: 0%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+  <div style="height: 100vh">
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark green fixed-top">
+      <a class="navbar-brand text-center" href="#">Open hunter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+        aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <i class="far fa-comment-alt"></i>
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="far fa-bell"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
+                alt="avatar image" height="35">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+              <a class="dropdown-item" href="#">My account</a>
+              <a class="dropdown-item" href="../index.html">Log out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--/.Navbar -->
+
+    <!-- Navbar  mobile-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark green" id="mobile">
+      <div class="container">
+
+        <a class="navbar-brand" href="#">
+          <strong><i class="fas fa-bars" data-toggle="modal" data-target="#sidenave"></i></strong></a>
+        <h5 class="h5-responsive text-white text-center mr-5">Opportunities</h5>
+        <strong><i class="fas fa-bell text-white" data-toggle="modal" data-target="#sidenave">
+            <sup class="badge badge-danger mr-2">0</sup>
+          </i></strong></a>
+        <a href="search.php"><strong><i class="fas fa-search text-white"></i></strong></a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="img/mtn.png" class="rounded-circle z-depth-0"
+                alt="avatar image" height="35">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+              <a class="dropdown-item" href="#">My account</a>
+              <a class="dropdown-item" href="../index.html">Log out</a>
+            </div>
+          </li>
+        </ul>
+
+        </a>
+
+      </div>
+    </nav>
+    <!-- Navbar mobile -->
+
+
+    <div class="card mb-3 text-center animated bounce " style="margin-top: 6%;" id="dektop">
+      <div class="card-body">
+        Company Opportunities.
+      </div>
+    </div>
+
+    <!-- Grid row -->
+    <div class="row ">
+
+      <!-- Grid column -->
+      <div class="col-lg-3 col-md-6" id="dektop">
+
+        <div class="media mt-4 px-4">
+          <img class="card-img-100 rounded-circle d-flex z-depth-1 mr-3"
+            src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" alt="Generic placeholder image">
+          <div class="media-body">
+            <h5 class="font-weight-bold mt-0">
+              <a class="text-default" href="">Danny Newman</a>
+            </h5>
+            <ul class="list-unstyled list-inline mb-2 pt-1">
+              <li class="list-inline-item">
+                <a class="grey-text mr-1"><i class="fab fa-lg fa-facebook"> </i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="grey-text mr-1"><i class="fab fa-lg fa-twitter"> </i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="grey-text mr-1"><i class="fab fa-lg fa-google-plus"> </i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="grey-text mr-1"><i class="fab fa-lg fa-linkedin"> </i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="grey-text mr-1"><i class="fab fa-lg fa-instagram"> </i></a>
+              </li>
+            </ul>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consectetur accusamus velit nostrum et
+            magnam.
+          </div>
+        </div><br>
+        <div class="card px-4">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Messages</li>
+            <li class="list-group-item">Alerts</li>
+            <li class="list-group-item">Friend Requests</li>
+            <li class="list-group-item">Companies</li>
+            <li class="list-group-item">Hunters</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-6 col-md-12"> 
+
+        <div class="card text-white bg-success mb-1 text-center" style="max-width: 100rem;">
+          <div class="card-header">Company Opportunities</div>
+        </div>
+
+        <!--op 1-->
+        <div class="container my-2">
+
+          <!-- Section: Block Content -->
+          <section>
+        
+            <div class="card card-list">
+              <div class="card-header white d-flex justify-content-between align-items-center py-3">
+                <div class="d-flex justify-content-start align-items-center">
+                  <img src="img/mtn.png" class="z-depth-1 rounded-circle" width="45" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <a href="#!" class="font-weight-normal mb-0">MTN UGANDA</a>
+                     </h4 class="title h1 my-4">23 Sales and marketing positions</h4>
+                     <p class="small text-muted mb-0">Shared publicly - 8:30 PM Today</p>
+                   
+                  </div>
+                </div>
+               
+              </div>
+              <div class="card-body">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Things/12-col/img%20%289%29.jpg" class="img-fluid">
+                <p class="my-4">I took this photo this morning. What do you guys think?</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-fb btn-sm py-1 px-2 m-0 mr-2"><i class="far fa-thumbs-up pr-1"></i> Like</button>
+                    <button type="button" class="btn btn-light btn-sm py-1 px-2 m-0 mr-2"><i class="fas fa-share pr-1"></i> Share</button>
+                  </div>
+                  <div class="d-flex flex-column pl-3">
+                    <p class="small text-muted mb-0">135 likes - 7 comments</p>
+                  </div>
+                </div>
+              </div>
+              <div class="py-4 grey lighten-4">
+                <div class="px-3">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(19).jpg" class="z-depth-1 rounded-circle float-left" width="40" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <div class="">
+                      <a href="#!" class="font-weight-normal mb-0">Jenny Doe</a>
+                      <p class="small text-muted float-right mb-0">8:35 PM Today</p>
+                    </div>
+                    <p class="font-weight-light dark-grey-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit consequuntur, minus tenetur dicta optio sint nobis nesciunt deserunt quisquam eius.</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+                <div class="px-3">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="z-depth-1 rounded-circle float-left" width="40" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <div class="">
+                      <a href="#!" class="font-weight-normal mb-0">Rachel Simpson</a>
+                      <p class="small text-muted float-right mb-0">8:35 PM Today</p>
+                    </div>
+                    <p class="font-weight-light dark-grey-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit consequuntur, minus tenetur dicta optio sint nobis nesciunt deserunt quisquam eius.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer white py-3">
+                <div class="form-group mb-0">
+                  <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="2"
+                    placeholder="Write a comment" style=" border-bottom: 4px solid green; border-left: 8px solid green; border-top:none; border-right:none;"></textarea>
+                  <div class="text-right pt-1">
+                    <button class="btn btn-outline-success btn-sm mb-0 mr-0">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </section>
+          <!-- Section: Block Content -->
+
+          
+        </div>
+        <!--end op 1-->
+
+        <div class="container my-2">
+
+          <!-- Section: Block Content -->
+          <section>
+        
+            <div class="card card-list">
+              <div class="card-header white d-flex justify-content-between align-items-center py-3">
+                <div class="d-flex justify-content-start align-items-center">
+                  <img src="img/aitel.png" class="z-depth-1 rounded-circle" width="45" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <a href="#!" class="font-weight-normal mb-0">AIRTEL UGANDA</a>
+                  </h4 class="title h1 my-4">23 internship postions in IT Depterment</h4>
+                    <p class="small text-muted mb-0">Shared publicly - 8:30 PM Today</p>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="card-body">
+                <img src="img/int.jfif" class="img-fluid" width="100%">
+                <p class="my-4">I took this photo this morning. What do you guys think?</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-fb btn-sm py-1 px-2 m-0 mr-2"><i class="far fa-thumbs-up pr-1"></i> Like</button>
+                    <button type="button" class="btn btn-light btn-sm py-1 px-2 m-0 mr-2"><i class="fas fa-share pr-1"></i> Share</button>
+                  </div>
+                  <div class="d-flex flex-column pl-3">
+                    <p class="small text-muted mb-0">135 likes - 7 comments</p>
+                  </div>
+                </div>
+              </div>
+              <div class="py-4 grey lighten-4">
+                <div class="px-3">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(19).jpg" class="z-depth-1 rounded-circle float-left" width="40" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <div class="">
+                      <a href="#!" class="font-weight-normal mb-0">Jenny Doe</a>
+                      <p class="small text-muted float-right mb-0">8:35 PM Today</p>
+                    </div>
+                    <p class="font-weight-light dark-grey-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit consequuntur, minus tenetur dicta optio sint nobis nesciunt deserunt quisquam eius.</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+                <div class="px-3">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="z-depth-1 rounded-circle float-left" width="40" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <div class="">
+                      <a href="#!" class="font-weight-normal mb-0">Rachel Simpson</a>
+                      <p class="small text-muted float-right mb-0">8:35 PM Today</p>
+                    </div>
+                    <p class="font-weight-light dark-grey-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit consequuntur, minus tenetur dicta optio sint nobis nesciunt deserunt quisquam eius.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer white py-3">
+                <div class="form-group mb-0">
+                  <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="2"
+                    placeholder="Write a comment" style=" border-bottom: 4px solid green; border-left: 8px solid green; border-top:none; border-right:none;"></textarea>
+                  <div class="text-right pt-1">
+                    <button class="btn btn-outline-success btn-sm mb-0 mr-0">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </section>
+          <!-- Section: Block Content -->
+
+          
+        
+        
+        </div>
+        <div class="text-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-3 col-md-6" style="margin-left: auto;" id="dektop">
+        <div class="container my-5">
+
+
+          <!-- Section: Block Content -->
+          <section>
+        
+            <div class="card card-list">
+              <div class="card-header white d-flex justify-content-between align-items-center py-3">
+                <div class="d-flex justify-content-start align-items-center">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(18).jpg" class="z-depth-1 rounded-circle" width="45" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <a href="#!" class="font-weight-normal mb-0">Amanda Nicolson</a>
+                    <p class="small text-muted mb-0">Shared publicly - 8:30 PM Today</p>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="card-body">
+                <img src="img/in.png" class="img-fluid">
+                <p class="my-4">I took this photo this morning. What do you guys think?</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-fb btn-sm py-1 px-2 m-0 mr-2"><i class="far fa-thumbs-up pr-1"></i> Like</button>
+                    <button type="button" class="btn btn-light btn-sm py-1 px-2 m-0 mr-2"><i class="fas fa-share pr-1"></i> Share</button>
+                  </div>
+                  <div class="d-flex flex-column pl-3">
+                    <p class="small text-muted mb-0">135 likes - 7 comments</p>
+                  </div>
+                </div>
+              </div>
+              <div class="py-4 grey lighten-4">
+                <div class="px-3">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(19).jpg" class="z-depth-1 rounded-circle float-left" width="40" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <div class="">
+                      <a href="#!" class="font-weight-normal mb-0">Jenny Doe</a>
+                      <p class="small text-muted float-right mb-0">8:35 PM Today</p>
+                    </div>
+                    <p class="font-weight-light dark-grey-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit consequuntur, minus tenetur dicta optio sint nobis nesciunt deserunt quisquam eius.</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+                <div class="px-3">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="z-depth-1 rounded-circle float-left" width="40" alt="avatar image">
+                  <div class="d-flex flex-column pl-3">
+                    <div class="">
+                      <a href="#!" class="font-weight-normal mb-0">Rachel Simpson</a>
+                      <p class="small text-muted float-right mb-0">8:35 PM Today</p>
+                    </div>
+                    <p class="font-weight-light dark-grey-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit consequuntur, minus tenetur dicta optio sint nobis nesciunt deserunt quisquam eius.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer white py-3">
+                <div class="form-group mb-0">
+                  <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="2"
+                    placeholder="Write a comment" style=" border-bottom: 4px solid green; border-left: 8px solid green; border-top:none; border-right:none;"></textarea>
+                  <div class="text-right pt-1">
+                    <button class="btn  btn-outline-success btn-sm mb-0 mr-0">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </section>
+          <!-- Section: Block Content -->
+        
+        
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+
+    </div>
+    <!-- Grid row -->
+
+
+  </div>
+  <!-- End your project here-->
+
+
+  <!--------------------------------------------modal nave----------------------->
+  <!-- Full Height Modal Right -->
+  <div class="modal fade left" id="sidenave" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+
+    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-dialog-scrollable modal-full-height modal-left"
+      style="margin-left:0px;margin-top:0px; width:75%; height:100%;" role="document">
+
+
+      <div class="modal-content text-white">
+        <div class="modal-header navbar" style="background-color:green;">
+          <div class="row">
+            <div class="col-4">
+              <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" width="100%" src="img/user.png" alt="log">
+            </div>
+            <div class="col-8">
+              <p style="margin-left:0px;">Oppen hunter</p>
+            </div>
+          </div>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+        </div>
+        <div class="modal-body text-black">
+
+          <span style="color:black;">
+            <h6 class="h6">Pages</h6><span>
+              <a data-toggle="modal" data-target="#exampleModalCenter"><span style="font-size:120%;">
+                  <button type="button" id="menubtn" class="btn-floating btn-success  px-1"><i
+                      class="fab fa-angellist"></i></button>
+                  Home</span><br>
+                <a href="personalposts.php"><span style="font-size:120%;">
+                    <button type="button" id="menubtn" class="btn-floating btn-success  px-1"><i
+                        class="fab fa-creative-commons-sa"></i></button>
+                    About us</span><br>
+                  <a href="personalposts.php"><span style="font-size:120%;">
+                      <button type="button" id="menubtn" class="btn-floating btn-success  px-1"><i
+                          class="fab fa-creative-commons-sa"></i></button>
+                      Contact us</span><br>
+
+                    <hr>
+                    <span style="color:black;">
+                      <h6 class="h6">Trending</h6><span>
+                        <a data-toggle="modal" data-target="#exampleModalCenter"><span style="font-size:120%;">
+                            <button type="button" id="menubtn" class="btn-floating btn-success  px-1"><i
+                                class="fab fa-angellist"></i></button>
+                            Notifications</span><span class="badge badge-success" style="float:right;">0</span></a><br>
+                        <a href="index.php"><span style="font-size:120%;">
+                            <button type="button" id="menubtn" class="btn-floating btn-success  px-1"><i
+                                class="fab fa-creative-commons-sa"></i></button>
+                            Messages</span><span class="badge badge-success" style="float:right;">0</span></a><br>
+                        <a href="post.html"><span style="font-size:120%;">
+                            <button type="button" id="menubtn" class="btn-floating btn-success  px-1"><i
+                                class="fab fa fa-user"></i></button>
+                            Post Opportunity</span></a><br>
+
+
+
+                        <hr>
+                        <span style="color:black;">
+                          <h6 class="h6">Setting</h6><span>
+                            <a href="profile.php"><span style="font-size:120%;">
+                                <button type="button" id="menubtn" class="btn-floating btn-danger  px-1"><i
+                                    class="fab fa fa-cog"></i></button>
+                                User Profile</span><span class="badge badge-success"
+                                style="float:right;">0</span></a><br>
+
+                            <a href="../configs/logout.php"><span style="font-size:120%;">
+                                <button type="button" id="menubtn" class="btn-floating btn-danger  px-1"><i
+                                    class="fab fa fa-sign-out-alt"></i></button>
+                                Logout</span></a><br>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Full Height Modal Right -->
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+  <!--start pws-->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
